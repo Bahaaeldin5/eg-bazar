@@ -5,6 +5,7 @@
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="facebook-domain-verification" content="t2lg0gqmu99g0xpy39ma0eld3w47mo" />
     <!-- main css template file -->
     <link rel="stylesheet" href="css/main-bazar-style.css"/>
     <!-- render All Element normaly -->
@@ -15,8 +16,50 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<!-- Meta Pixel Code -->
+	<script>
+	  !function(f,b,e,v,n,t,s)
+	  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+	  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+	  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+	  n.queue=[];t=b.createElement(e);t.async=!0;
+	  t.src=v;s=b.getElementsByTagName(e)[0];
+	  s.parentNode.insertBefore(t,s)}(window, document,'script',
+	  'https://connect.facebook.net/en_US/fbevents.js');
+	  fbq('init', '399996291972205');
+	  fbq('track', 'PageView');
+	</script>
+	<noscript><img height="1" width="1" style="display:none"
+	  src="https://www.facebook.com/tr?id=399996291972205&ev=PageView&noscript=1"
+	/></noscript>
+	<!-- End Meta Pixel Code -->
 </head>
 <body>
+		<!--start  Messenger Code -->
+	    <div id="fb-root"></div>
+	    <div id="fb-customer-chat" class="fb-customerchat"></div>
+	    <script>
+	      var chatbox = document.getElementById('fb-customer-chat');
+	      chatbox.setAttribute("page_id", "110815058268131");
+	      chatbox.setAttribute("attribution", "biz_inbox");
+	    </script>
+	    <script>
+	      window.fbAsyncInit = function() {
+		FB.init({
+		  xfbml            : true,
+		  version          : 'v13.0'
+		});
+	      };
+
+	      (function(d, s, id) {
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) return;
+		js = d.createElement(s); js.id = id;
+		js.src = 'https://connect.facebook.net/ar_AR/sdk/xfbml.customerchat.js';
+		fjs.parentNode.insertBefore(js, fjs);
+	      }(document, 'script', 'facebook-jssdk'));
+	    </script>
+	    <!--end  Messenger Code -->
 	<header>
 		<div class="logo"><img src="image/logo01.png" alt="logo"></div>
         <div class="products">
