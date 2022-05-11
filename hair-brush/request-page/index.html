@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>contact-page</title>
+        <link rel="stylesheet" href="style-form.css">
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+            <!-- Meta Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '2213378712145095');
+      fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=2213378712145095&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+    </head>
+    <body>
+        <!--start  Messenger Code -->
+        <div id="fb-root"></div>
+        <div id="fb-customer-chat" class="fb-customerchat"></div>
+        <script>
+          var chatbox = document.getElementById('fb-customer-chat');
+          chatbox.setAttribute("page_id", "110815058268131");
+          chatbox.setAttribute("attribution", "biz_inbox");
+        </script>
+        <script>
+          window.fbAsyncInit = function() {
+            FB.init({
+              xfbml            : true,
+              version          : 'v13.0'
+            });
+          };
+
+          (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/ar_AR/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+          }(document, 'script', 'facebook-jssdk'));
+        </script>
+        <!--end  Messenger Code -->
+        <div class="container">
+            <div class="title">بيانات الطلب</div>
+            <form action="https://formsubmit.co/Bazarsales2@gmail.com" method="POST">
+                <input type = "hidden" name = "_ next" value = "https://eg-bazar.000webhostapp.com/form-page/thanks-page.html">
+                <input type="hidden" name="_subject" value="thanks!">
+                <input type="hidden" name="_template" value="table">
+                <div class="user-details">
+                    <div class="input-box">
+                        <span class="details">الأسم ثلاثى</span>
+                        <input type="text" name="name" placeholder="أدخل اسمك ثلاثي" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">الايميل</span>
+                        <input type="email" name="email" placeholder="أدخل الايميل الخاص بك">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">رقم الموبايل</span>
+                        <input type="text" name="phone number one" placeholder="ادخل رقم الموبايل" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">رقم الموبايل الثاني</span>
+                        <input type="text" name="phone number two" placeholder="ادخل رقم موبايل ثاني" >
+                    </div>
+                    <div class="input-box section">
+                        <div class="part-one">
+                            <span class="details">المحافظة</span>
+                            <input type="text" name="city" placeholder="المحافظة" required>
+                        </div>
+                        <div class="part-two">
+                            <span class="details">المركز</span>
+                            <input type="text" name="District" placeholder="المركز" required>
+                        </div>
+                    </div>
+                    <div class="input-box section">
+                        <div class="part-one">
+                            <span class="details">عدد القطع</span>
+                            <input type="number" name="number of products" placeholder="الارقام بالانجليزي" onchange="mult(this.value);" onkeyup="mult(this.value);" maxlength="2" min="1" required>
+                        </div>
+                        <div class="part-two">
+                            <span class="details">السعر</span>
+                            <input type="text" name="price" id="output" readonly>
+                        </div>
+                    </div>
+                    <div class="input-box full-width">
+                        <span class="details full-width">العنوان بالتفصيل</span>
+                        <input type="text" name="ِAddress" placeholder="ادخل عنوانك بالتفصيل" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">تكلفة الشحن</span>
+                        <input class="back-color" type="text" name="Shipping Rate" value="مجاني لفترة محدودة" readonly >
+                    </div>
+                    <div class="input-box">
+                        <span class="details">المنتج المطلوب</span>
+                        <input class="back-color" type="text" name="product" value="فرشة لفرد الشعر" readonly >
+                    </div>
+                    <div class="input-box full-width">
+                        <span class="details">الملاحظات </span>
+                        <input type="text" name="notes" placeholder="ارسل استفسارك">
+                    </div>
+                </div>
+                <div class="button">
+                    <a href="thanks-page.html"><input type="submit" value="send"></a>
+                </div>
+            </form>
+        </div>
+        <script>
+            /*function calculateAmount(val) {
+                var tot_price = val * 100;
+                document.getElementById('tot_amount').value = tot_price;
+            }*/
+            function mult(val) {
+                var x = 250 * val;
+                document.getElementById("output").value = x;    
+            }
+        </script>
+    </body>
+</html>
